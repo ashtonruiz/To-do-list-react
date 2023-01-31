@@ -4,9 +4,9 @@ import { getUser } from '../Auth/Auth.js';
 const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-    const currentUser = getUser();
-    const [user, setUser] = useState(currentUser);
-    return <userContext.Provider value={{ user, setUser }}>{children}</userContext.Provider>
+  const currentUser = getUser();
+  const [user, setUser] = useState(currentUser);
+  return <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>;
 };
 
-export {UserProvider, UserContext};
+export { UserProvider, UserContext };
