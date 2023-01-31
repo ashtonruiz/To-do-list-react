@@ -1,20 +1,23 @@
-import { client } from '../../services/client.js';
+import React from 'react';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import './Auth.css';
 
-export function getUser() {
-  return client.auth.currentUser;
-}
+export default function Auth() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
-export async function authUser(email, password, type) {
-  let response;
-  if (type === 'sign-up') {
-    response = await client.auth.signUp({ email, password });
-  } else {
-    response = await client.auth.signIn({ email, password });
-  }
+  const submitAuth = async () => {
 
-  return response.user;
-}
+  };
 
-export async function signOut() {
-  await client.auth.signOut();
+  return (
+    <div className='Auth'>
+      <nav className='nav'>
+        <div className='nav-heading'>To Do</div>
+        <NavLink to='/auth/sign-in'>Sign in</NavLink>
+        <NavLink to='/auth/sign-up'>Sign Up</NavLink>
+      </nav>
+    </div>
+  );
 }
