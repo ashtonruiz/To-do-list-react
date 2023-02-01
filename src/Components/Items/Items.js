@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 export default function Items() {
   const { user } = useContext(UserContext);
   if (!user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/auth/sign-in' />;
   }
   return (
     <div>
