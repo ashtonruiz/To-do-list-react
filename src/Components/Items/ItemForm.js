@@ -9,3 +9,7 @@ export default function ItemForm() {
     </div>
   );
 }
+
+// need to continue building out item form with some class names... also
+// might need to just wrap the whole thing in a form? That is what I did with
+// the signin/up situation. Also need to set State and createListItem stuff
